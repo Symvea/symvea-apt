@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+# Create symvea user
+if ! id "symvea" &>/dev/null; then
+    useradd --system --home /var/lib/symvea --shell /bin/false symvea
+fi
+
+# Create directories
+mkdir -p /var/lib/symvea
+chown symvea:symvea /var/lib/symvea
+
+# Install and enable systemd service
+systemctl daemon-reload
+systemctl enable symvea.service

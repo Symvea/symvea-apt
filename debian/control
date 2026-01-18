@@ -1,0 +1,9 @@
+Package: symvea
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Symvea Team <contact@symvea.com>
+Description: High-performance daemon for symbol analysis and code intelligence
+ Symvea Daemon provides real-time symbol tracking, code metrics,
+ and intelligent analysis for development workflows.

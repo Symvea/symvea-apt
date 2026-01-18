@@ -1,0 +1,14 @@
+[Unit]
+Description=Symvea Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=symvea
+Group=symvea
+ExecStart=/usr/bin/symvead --config /etc/symvea/example-config.toml
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
